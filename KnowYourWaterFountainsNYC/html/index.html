@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Find public drinking fountains across New York City." />
+  <title>Know Your Water Fountains NYC</title>
+  <link rel="stylesheet" href="../css/global.css" />
+  <link rel="stylesheet" href="../css/map.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Know Your Water Fountains NYC, home">
+        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4C19 13 10 22 10 30a14 14 0 0 0 28 0C38 22 29 13 24 4Z" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/><path d="M17 31c0 4 3 7 7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+        <span>Know Your Water Fountains NYC</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html" aria-current="page">Map</a>
+        <a href="description.html">Description</a>
+        <a href="credentials.html">Credentials</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap map-page">
+    <!-- MAP API -->
+    <div id="fountain-map" role="region" aria-label="Map of public drinking fountains in New York City"></div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <span>&copy; <span class="current-year">2026</span> Know Your Water Fountains NYC</span>
+      <span>Not an official NYC government service. Verify locations with the data provider.</span>
+    </div>
+  </footer>
+  <script src="../js/app.js"></script>
+</body>
+</html>
