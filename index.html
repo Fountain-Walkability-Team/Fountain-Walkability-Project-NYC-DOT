@@ -1,39 +1,103 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Find public drinking fountains across New York City." />
+  <meta name="description" content="Explore public drinking fountains and pedestrian accessibility across New York City." />
+
   <title>Know Your Water Fountains NYC</title>
+
   <link rel="stylesheet" href="css/global.css" />
   <link rel="stylesheet" href="css/map.css" />
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+  <!-- MapLibre -->
+  <link
+    href="https://unpkg.com/maplibre-gl@5.13.0/dist/maplibre-gl.css"
+    rel="stylesheet"
+  />
+  <script src="https://unpkg.com/maplibre-gl@5.13.0/dist/maplibre-gl.js"></script>
+
+  <!-- PMTiles -->
+  <script src="https://unpkg.com/pmtiles@4.3.0/dist/pmtiles.js"></script>
 </head>
+
 <body>
+
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="index.html" aria-label="Know Your Water Fountains NYC, home">
-        <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 4C19 13 10 22 10 30a14 14 0 0 0 28 0C38 22 29 13 24 4Z" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/><path d="M17 31c0 4 3 7 7 7" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+
+      <a class="brand" href="index.html">
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <path d="M24 4C19 13 10 22 10 30a14 14 0 0 0 28 0C38 22 29 13 24 4Z"
+            fill="none" stroke="currentColor" stroke-width="3.2"/>
+          <path d="M17 31c0 4 3 7 7 7"
+            fill="none" stroke="currentColor" stroke-width="2.5"/>
+        </svg>
         <span>Know Your Water Fountains NYC</span>
       </a>
+
       <nav class="site-nav" aria-label="Main">
         <a href="index.html" aria-current="page">Map</a>
         <a href="html/description.html">Description</a>
         <a href="html/credentials.html">Credentials</a>
       </nav>
+
     </div>
   </header>
 
   <main class="wrap map-page">
-    <!-- MAP API -->
-    <div id="fountain-map" role="region" aria-label="Map of public drinking fountains in New York City"></div>
+
+    <div class="map-heading">
+      <h1>NYC Drinking Fountain Walkability</h1>
+      <p>
+        Explore public drinking fountains and nearby pedestrian
+        street networks throughout New York City.
+      </p>
+    </div>
+
+    <div id="map-controls">
+      <strong>Map Layers</strong>
+
+      <label>
+        <input type="checkbox" id="fountains" checked>
+        <span class="legend-dot red"></span>
+        Drinking Fountains
+      </label>
+
+      <label>
+        <input type="checkbox" id="eighth" checked>
+        <span class="legend-line blue"></span>
+        1/8-Mile Walkshed
+      </label>
+
+      <label>
+        <input type="checkbox" id="quarter" checked>
+        <span class="legend-line purple"></span>
+        1/4-Mile Walkshed
+      </label>
+    </div>
+
+    <div
+      id="fountain-map"
+      role="region"
+      aria-label="Interactive map of drinking fountains and walksheds in New York City">
+    </div>
+
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
-      <span>&copy; <span class="current-year">2026</span> Know Your Water Fountains NYC</span>
+      <span>&copy; <span class="current-year">2026</span>
+        Know Your Water Fountains NYC</span>
       <span>Not an official NYC government service.</span>
     </div>
   </footer>
-  <script src="../js/app.js"></script>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
