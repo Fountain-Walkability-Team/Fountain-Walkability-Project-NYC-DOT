@@ -61,7 +61,7 @@ async function initializeMap() {
         "data/eighth.geojson",
         eighthLayer,
         {
-          color: "#00bfff",
+          color: "#00ff80",
           weight: 2,
           opacity: 0.8
         }
@@ -71,7 +71,7 @@ async function initializeMap() {
         "data/quarter.geojson",
         quarterLayer,
         {
-          color: "#a855f7",
+          color: "#262cd6",
           weight: 2,
           opacity: 0.7
         }
